@@ -1,0 +1,31 @@
+# TUGAS UTS KELOMPOK
+# Menentukan Nilai Akhir Mahasiswa
+
+# Identitas Mahasiswa
+nama = input("Nama: ")
+nim = input("NIM: ")
+prodi = input("Prodi: ")
+
+#Deklarasi Fungsi Operator
+def fungsi_total_nilai(nilai_harian, nilai_uts, nilai_uas) :
+    nilai_harian = int(nilai_harian) * 0.3
+    nilai_uts = int(nilai_uts) * 0.3
+    nilai_uas = int(nilai_uas) * 0.4
+
+    nilai_akhir = nilai_harian + nilai_uts + nilai_uas
+    return nilai_akhir
+
+#Deklarasi Fungsi Percabangan
+def fungsi_percabangan (var_nilai) :
+    var_indeks = ""
+    if (var_nilai >= 0 and var_nilai < 20) :
+        var_indeks = "E"
+    elif (var_nilai >= 20 and var_nilai < 40) :
+        var_indeks = "D"
+    elif (var_nilai >= 40 and var_nilai < 60) :
+        var_indeks = "C"
+    elif (var_nilai >= 60 and var_nilai < 80) :
+        var_indeks = "B"
+    elif (var_nilai >= 80 and var_nilai < 100) :
+        var_indeks = "A"
+    return var_indeks
